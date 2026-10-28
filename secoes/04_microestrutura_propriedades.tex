@@ -1,0 +1,39 @@
+\section{Microestrutura e Propriedades Mecânicas em Ligas de Alta Entropia Hipersónicas}\label{sec:microestrutura_propriedades_hea}
+
+As Ligas de Alta Entropia (HEAs) e as Ligas Refratárias de Alta Entropia (RHEAs) são essenciais para viabilizar veículos hipersónicos ($M > 5$). Para que os componentes estruturais resistam a essas condições operacionais extremas, é necessário um controle rigoroso da relação entre a composição química, a estrutura interna (microestrutura) e o desempenho mecânico.
+
+\subsection{A Microestrutura como Elo de Desempenho}\label{subsec:microestrutura_elo_desempenho}
+
+O ambiente hipersónico impõe aos materiais choques térmicos brutais, com gradientes térmicos variando de $-170~^\circ\mathrm{C}$ a mais de $2000~^\circ\mathrm{C}$ em distâncias milimétricas, associados a pressões estagnadas e fluxos de plasma altamente reativos. Nesse regime extremo, a integridade estrutural é ditada pela arquitetura microestrutural subjacente. Enquanto matrizes cúbicas de corpo centrado (BCC) mantêm patamares mecânicos expressivos entre $1000~^\circ\mathrm{C}$ e $2000~^\circ\mathrm{C}$, estruturas de rede cúbica de faces centradas (FCC, a exemplo da liga equiatômica CoCrFeMnNi) apresentam excelente maleabilidade a frio, porém sofrem perda drástica de sustentação de carga acima de $527~^\circ\mathrm{C}$. 
+
+A preservação dos contornos de grão em altas temperaturas é garantida pela cinética de difusão atômica lenta característica do efeito de alta entropia. A dopagem com elementos intersticiais estratégicos, como o boro, promove ancoramento adicional e eleva a coesão intergranular, bloqueando o recrescimento celular e distribuindo tensões dinâmicas de modo uniforme pela rede cristalina para mitigar a propagação prematura de trincas.
+
+\subsection{Exigências em Componentes Críticos}\label{subsec:exigencias_criticos}
+
+A avaliação mecânica em componentes aerotérmicos de estagnação --- como bordos de ataque afilados e cones de nariz --- concentra-se no limite de escoamento, na resistência específica e na tolerância ao choque térmico. Nessas regiões de choque aerodinâmico, o atrito dissipativo gera gradientes térmicos de até $1000~\mathrm{K}$ em extensões de meros $4~\mathrm{mm}$. Caso a tensão termomecânica decorrente dessa dilatação diferencial supere o limite de escoamento do material ($\sigma_{0{,}2}$), manifesta-se deformação plástica permanente, alterando o perfil aerodinâmico e induzindo transições turbulentas catastróficas. A Tabela~\ref{tab:hea_desempenho_mecanico} sintetiza o comportamento mecânico comparativo entre sistemas BCC refratários e ligas convencionais.
+
+\begin{table}[!htbp]
+\centering
+\caption{Desempenho mecânico e estrutural de ligas avançadas em alta temperatura.}\label{tab:hea_desempenho_mecanico}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Sistema de Liga} & \textbf{Fase Cristalina} & \textbf{Desempenho Mecânico} & \textbf{Aplicação Típica} \\
+\midrule
+NbMoTaW / VNbMoTaW & BCC Monofásica & Escoamento de $400$ a $800~\mathrm{MPa}$ a $1200$--$1600~^\circ\mathrm{C}$. & Estruturas Quentes \\
+NbMoTaW-0.1B (Dopada) & BCC + GOPBs & Alta resistência até $1800~^\circ\mathrm{C}$ e $\sim 6\%$ de plasticidade a frio. & Bordos de Ataque \\
+Inconel 718 (Superliga) & FCC ($\gamma / \gamma''$) & Perda severa de resistência mecânica acima de $700~^\circ\mathrm{C}$. & Limite Convencional \\
+\bottomrule
+\end{tabularx}
+\legend{Fonte: Elaborado pelos autores (2026), com base em dados compilados da literatura.}
+\end{table}
+
+\subsection{Desafios de Projeto e Soluções Estruturais}\label{subsec:desafios_solucoes}
+
+O desenvolvimento de RHEAs para voo hipersônico é historicamente condicionado pelo compromisso entre densidade, refratariedade e tenacidade. Elementos refratários pesados (W, Ta, Mo, Nb) garantem estabilidade mecânica sob calor extremo, mas impõem penalidades severas de peso e elevam a temperatura de transição dúctil-frágil, tornando a liga excessivamente quebradiça sob temperatura ambiente. Em contrapartida, a adição desbalanceada de elementos mais leves (Ti, Zr, V, Cr, Al) atenua a densidade e confere maleabilidade a frio, mas pode comprometer o limite de escoamento acima de $1200~^\circ\mathrm{C}$.
+
+Para contornar esse dilema, as rotas metalúrgicas contemporâneas articulam três abordagens complementares: o processamento termomecânico avançado (via sinterização por plasma de faísca e recozimento controlado), que elimina microporosidades de fundição e refina o tamanho de grão; a engenharia de contornos de fase ordenados (GOPBs) via dopagem de boro, viabilizando plasticidade à temperatura ambiente sem degradação refratária; e a passivação superficial através da dosagem estequiométrica de Al, Cr e Si, propiciando barreiras intrínsecas contra erosão aerotérmica.
+
+\subsection{Síntese}\label{subsec:sintese}
+
+A caracterização minuciosa dessas propriedades mecânicas e a otimização dos recursos microestruturais formam a base de dados necessária para alimentar simulações termomecânicas modernas. É através desse domínio e previsibilidade estrutural que os conceitos de ligas de alta entropia deixam de ser apenas pesquisas de laboratório e passam a ser soluções reais e seguras para a tecnologia aeroespacial do futuro.

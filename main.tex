@@ -1,0 +1,36 @@
+%% ================================================================
+%% Artigo Cienciométrico -- Ligas de Alta Entropia para Aplicações Hipersônicas
+%% Arquitetura Modular / Clean Code
+%% Compilar: pdflatex main.tex
+%% ================================================================
+
+\input{config/preambulo.tex}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{plain}
+
+%% ---------------- Resumo e Palavras-chave
+\input{secoes/00_resumo.tex}
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+%% ---------------- Seções do Artigo
+\input{secoes/01_introducao.tex}
+\input{secoes/02_metodologia.tex}
+\input{secoes/03_resultados_discussao.tex}
+\input{secoes/04_microestrutura_propriedades.tex}
+\input{secoes/05_resistencia_oxidacao.tex}
+\input{secoes/06_revestimentos_manufatura.tex}
+\input{secoes/07_fundamentacao_tecnologica_nanoparticulas.tex}
+\input{secoes/07_potencial_aplicacoes_hipersonicas.tex}
+\input{secoes/08_limitacoes.tex}
+\input{secoes/09_conclusoes.tex}
+
+%% ---------------- Apêndice (Protocolo de Replicabilidade)
+\input{secoes/10_apendice.tex}
+
+\end{document}

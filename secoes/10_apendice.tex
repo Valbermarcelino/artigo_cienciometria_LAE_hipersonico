@@ -1,0 +1,85 @@
+\appendix
+\section{Expressão de Busca e Protocolo de Replicabilidade na Web of Science}\label{apendice:query_wos}
+
+Para permitir a auditoria independente e a reprodução integral dos dados deste estudo, a expressão de busca foi construída combinando exaustivamente duas categorias temáticas através de um script em Python. O algoritmo gerou o produto cartesiano de pares booleanos no formato \texttt{(Termo\_Cat1 AND Termo\_Cat2)} unidos pelo operador \texttt{OR}, consultando simultaneamente os campos de Título (\texttt{TI}), Resumo (\texttt{AB}) e Palavras-chave do Autor (\texttt{AK}) na base de dados \emph{Web of Science Core Collection}.
+
+As duas listas de termos utilizadas na geração combinatória foram:
+
+\subsection*{Categoria 1: Descritores de Ligas de Alta Entropia e Ligas Refratárias (42 termos)}
+\begin{multicols}{2}
+\begin{enumerate}\footnotesize\itemsep=1pt\parsep=0pt
+  \item \texttt{"refractory high entropy alloy*"}
+  \item \texttt{"refractory high-entropy alloy*"}
+  \item \texttt{"refractory high entropy-alloy*"}
+  \item \texttt{"refractory high-entropy-alloy*"}
+  \item \texttt{"refractory high-entropy compositionally-complex alloy*"}
+  \item \texttt{"high entropy alloy*"}
+  \item \texttt{"high-entropy alloy*"}
+  \item \texttt{"high entropy-alloy*"}
+  \item \texttt{"high-entropy-alloy*"}
+  \item \texttt{"refractory complex concentrated alloy*"}
+  \item \texttt{"refractory complex-concentrated alloy*"}
+  \item \texttt{"refractory complexly concentrated alloy*"}
+  \item \texttt{"complex concentrated alloy*"}
+  \item \texttt{"complex-concentrated alloy*"}
+  \item \texttt{"compositionally complex alloy*"}
+  \item \texttt{"compositionally-complex alloy*"}
+  \item \texttt{"refractory compositionally complex alloy*"}
+  \item \texttt{"refractory compositionally-complex alloy*"}
+  \item \texttt{"refractory multi-principal element alloy*"}
+  \item \texttt{"refractory multi principal element alloy*"}
+  \item \texttt{"refractory multiprincipal element alloy*"}
+  \item \texttt{"refractory multi-principal-element alloy*"}
+  \item \texttt{"multi-principal element alloy*"}
+  \item \texttt{"multi principal element alloy*"}
+  \item \texttt{"multiprincipal element alloy*"}
+  \item \texttt{"multi-principal-element alloy*"}
+  \item \texttt{"multi-component alloy*"}
+  \item \texttt{"multicomponent alloy*"}
+  \item \texttt{"refractory concentrated solid solution alloy*"}
+  \item \texttt{"refractory concentrated solid-solution alloy*"}
+  \item \texttt{"concentrated solid solution alloy*"}
+  \item \texttt{"concentrated solid-solution alloy*"}
+  \item \texttt{"single-phase concentrated solid-solution alloy*"}
+  \item \texttt{"refractory alloy*"}
+  \item \texttt{"refractory metal alloy*"}
+  \item \texttt{"refractory metal-based high entropy alloy*"}
+  \item \texttt{"refractory-element-based high-entropy alloy*"}
+  \item \texttt{"body-centered cubic high-entropy alloy*"}
+  \item \texttt{"BCC high-entropy alloy*"}
+  \item \texttt{"BCC refractory alloy*"}
+  \item \texttt{"body-centered cubic refractory alloy*"}
+  \item \texttt{"refractory matrix high-entropy alloy*"}
+\end{enumerate}
+\end{multicols}
+
+\subsection*{Categoria 2: Descritores de Severidade Aerotérmica e Hipersônica (22 termos)}
+\begin{multicols}{2}
+\begin{enumerate}\footnotesize\itemsep=1pt\parsep=0pt
+  \item \texttt{hypersonic*}
+  \item \texttt{scramjet*}
+  \item \texttt{"waverider*"}
+  \item \texttt{"re-entry"}
+  \item \texttt{"reentry"}
+  \item \texttt{"leading edge*"}
+  \item \texttt{"nose cone*"}
+  \item \texttt{"nose cap*"}
+  \item \texttt{"thermal protection system*"}
+  \item \texttt{"aerothermal*"}
+  \item \texttt{"aerodynamic heating"}
+  \item \texttt{"high heat flux"}
+  \item \texttt{"heat flux"}
+  \item \texttt{ablation}
+  \item \texttt{ablative}
+  \item \texttt{"thermal shock"}
+  \item \texttt{"arc-jet"}
+  \item \texttt{"arc jet"}
+  \item \texttt{"oxyacetylene torch"}
+  \item \texttt{"oxy-acetylene"}
+  \item \texttt{"plasma jet"}
+  \item \texttt{"plasma wind tunnel"}
+\end{enumerate}
+\end{multicols}
+
+\subsection*{Instruções de parametrização para reprodução:}
+A consulta foi parametrizada nos campos de Título, Resumo e Palavras-chave do autor (\texttt{TI OR AB OR AK}) da coleção principal da \emph{Web of Science} (Clarivate Analytics). A expressão final executou o produto cartesiano de todos os pares \texttt{(Categoria\_1[i] AND Categoria\_2[j])} encadeados por \texttt{OR}, com corte temporal estendido de 2004 a 2026, resultando na recuperação nominal de 192 registros catalogados.

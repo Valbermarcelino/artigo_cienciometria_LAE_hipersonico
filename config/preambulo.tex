@@ -1,0 +1,110 @@
+%% ================================================================
+%% Artigo Cienciométrico -- Ligas de Alta Entropia para Aplicações Hipersônicas
+%% Configurações e Preâmbulo -- Padrão Moderno Overleaf / Academic Template
+%% ================================================================
+\documentclass[11pt,a4paper]{article}
+
+%% ---------------- Codificação e Fontes
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lmodern}
+
+%% ---------------- Paleta de Cores Acadêmica Moderna (Overleaf Style)
+\usepackage{color}
+\definecolor{primary}{rgb}{0.07, 0.21, 0.42}       % Deep Navy / Azul Marinho Nobre
+\definecolor{secondary}{rgb}{0.18, 0.40, 0.62}     % Slate Blue / Azul Médio
+\definecolor{accent}{rgb}{0.65, 0.15, 0.15}        % Dark Crimson / Destaque sutil
+\definecolor{linegray}{rgb}{0.80, 0.84, 0.90}      % Linha divisória suave
+\definecolor{boxbg}{rgb}{0.96, 0.97, 0.99}        % Fundo suave para caixas de resumo
+\definecolor{tablehead}{rgb}{0.90, 0.93, 0.97}     % Fundo para cabeçalho de tabelas
+
+%% ---------------- Geometria e Espaçamento de Página
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headheight=14.5pt]{geometry}
+\renewcommand{\baselinestretch}{1.18}               % Entrelinha arejada e agradável à leitura
+\setlength{\parindent}{1.0cm}                       % Recuo padrão elegante
+\setlength{\parskip}{3pt plus 1pt minus 1pt}        % Leve espaçamento entre parágrafos
+\usepackage{indentfirst}
+
+%% ---------------- Cabeçalhos e Rodapés Dinâmicos (fancyhdr)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsf{\color{secondary} Estudo Cienciométrico --- Ligas de Alta Entropia para Voo Hipersônico}}
+\fancyhead[R]{\small\textsf{\bfseries\color{primary} \thepage}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{{\color{linegray}\hrule height \headrulewidth \vspace{2pt}}}
+\renewcommand{\footrulewidth}{0pt}
+
+%% Estilo limpo para primeira página
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\small\textsf{\color{secondary} \thepage}}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+%% ---------------- Nomes em Português
+\renewcommand{\abstractname}{Resumo}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabela}
+\renewcommand{\refname}{Referências Bibliográficas}
+
+%% ---------------- Matemática, Gráficos e Tabelas
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+
+%% ---------------- Macros de compatibilidade e elegância para tabelas
+\providecommand{\toprule}{\hline\hline}
+\providecommand{\midrule}{\hline}
+\providecommand{\bottomrule}{\hline\hline}
+
+%% ---------------- Legenda de Figuras e Tabelas
+\newcommand{\legend}[1]{\par\vspace{4pt}{\footnotesize\color{secondary}\centering\textsf{#1}\par}\vspace{6pt}}
+
+%% ---------------- Citação longa em bloco
+\newenvironment{citacao}
+  {\par\vspace{0.6em}\begin{list}{}{\setlength{\leftmargin}{3.5cm}\setlength{\rightmargin}{0.5cm}\setlength{\parsep}{0pt}\setlength{\topsep}{0pt}}
+   \item[]\small\color{primary}\renewcommand{\baselinestretch}{1.05}\selectfont}
+  {\end{list}\vspace{0.6em}}
+
+%% ---------------- Tipografia de Títulos (Estilo Editorial Overleaf)
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}%
+  {1.8ex \@plus.2ex}%
+  {\normalfont\Large\bfseries\color{primary}}}
+
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+  {-2.8ex\@plus -1ex \@minus -.2ex}%
+  {1.2ex \@plus .2ex}%
+  {\normalfont\large\bfseries\color{secondary}}}
+
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+  {-2.2ex\@plus -1ex \@minus -.2ex}%
+  {0.8ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries\color{primary}}}
+\makeatother
+
+%% ---------------- Links e URLs formatadas
+\setlength{\leftmargini}{1.0cm}
+\usepackage{url}
+\urlstyle{sf}
+\providecommand{\href}[2]{{\color{secondary}\underline{#2}}}
+
+%% ---------------- Título e Autoria Estilizados
+\title{\vspace{-1.5cm}%
+  {\Huge\bfseries\color{primary} Estudo Cienciométrico Avançado sobre Ligas de Alta Entropia para Aplicações Hipersónicas}\\[0.35cm]
+  {\Large\textsl{\color{secondary} Redes de Autoria, Artigos Seminais e Evolução do Conhecimento}}%
+}
+\author{%
+  \textbf{Valber Marcelino Filho}\thanks{Instituto Militar de Engenharia / Pesquisador Principal} \quad\and\quad
+  \textbf{Rodrigo Andrade Paes}\thanks{Orientador e Supervisor de Pesquisa}%
+}
+\date{\vspace{0.2cm}\small\textsf{\color{secondary} Outubro de 2026}}
+
+%% ---------------- Formatação refinada de tabelas
+\renewcommand{\arraystretch}{1.28}
+\setlength{\tabcolsep}{6pt}
